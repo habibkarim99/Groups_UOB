@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قروبات كليات جامعة البحرين 2025-2026</title>
+<style>
+body {
+  font-family: "Tahoma", sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+.college-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: right;
+}
+.college-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+.college-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #f0f0f0;
+  padding: 10px;
+}
+.college-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #007B83;
+}
+.btn, .toggle-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #007B83;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin: 5px 5px 10px 0;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover, .toggle-btn:hover {
+  background: #005f63;
+}
+.majors {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+.majors li {
+  margin: 6px 0;
+}
+.majors a {
+  display: block;
+  background: #e0f7f7;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #007B83;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.majors a:hover {
+  background: #007B83;
+  color: #fff;
+  transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<h1>قروبات كليات جامعة البحرين 2025-2026</h1>
+<div class="container">
+
+<!-- كلية الآداب -->
+<div class="college-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية الآداب" class="college-img">
+  <div class="college-name">كلية الآداب</div>
+  <a class="btn" href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
+  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <ul class="majors">
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">Arabic Language and Literature</a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">Islamic Studies</a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">Mass Communication</a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">Tourism</a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">Arts and Design</a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">English Language and Literature</a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">History</a></li>
+  </ul>
+</div>
+
+<!-- كلية إدارة الأعمال -->
+<div class="college-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية إدارة الأعمال" class="college-img">
+  <div class="college-name">كلية إدارة الأعمال</div>
+  <a class="btn" href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
+  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <ul class="majors">
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Business Analytics</a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Entrepreneurship</a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">International Business and Economics</a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Islamic Banking & Finance</a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Marketing</a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Business Management</a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Banking & Finance</a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Accounting</a></li>
+  </ul>
+</div>
+
+<!-- كلية الهندسة -->
+<div class="college-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية الهندسة" class="college-img">
+  <div class="college-name">كلية الهندسة</div>
+  <a class="btn" href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
+  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <ul class="majors">
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Mechanical Engineering</a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Civil Engineering</a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Architecture</a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Interior Architecture</a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Chemical Engineering</a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Process Instrumentation & Control Engineering</a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Electrical Engineering</a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Electronics and Communications Engineering</a></li>
+  </ul>
+</div>
+
+<!-- كلية الحقوق -->
+<div class="college-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية الحقوق" class="college-img">
+  <div class="college-name">كلية الحقوق</div>
+  <a class="btn" href="https://chat.whatsapp.com/ERZlfEFgB3S9Fa3z4MJMPw?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
+  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <ul class="majors">
+    <li><a href="https://chat.whatsapp.com/ERZlfEFgB3S9Fa3z4MJMPw?mode=ems_copy_t" target="_blank">Law</a></li>
+</ul>
+</div>
+
+<!-- كلية العلوم -->
+<div class="college-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية العلوم" class="college-img">
+  <div class="college-name">كلية العلوم</div>
+  <a class="btn" href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
+  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <ul class="majors">
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Physics</a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Mathematics</a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Actuarial Science</a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Statistics and Data Science</a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Chemistry</a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Biology</a></li>
+  </ul>
+</div>
+
+<!-- استكمال باقي الكليات: العلوم الصحية والرياضية، البحرين للمعلمين، التعليم التطبيقي، تقنية المعلومات -->
+<!-- كلية العلوم الصحية والرياضية -->
+<div class="college-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية العلوم الصحية والرياضية" class="college-img">
+  <div class="college-name">كلية العلوم الصحية والرياضية</div>
+  <a class="btn" href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
+  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <ul class="majors">
+    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">Nursing</a></li>
+    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">Medical Laboratory Science</a></li>
+    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">Pharmacy</a></li>
+    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">Radiology Diagnostic</a></li>
+    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">Physical Education</a></li>
+  </ul>
+</div>
+
+<!-- كلية البحرين للمعلمين -->
+<div class="college-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية البحرين للمعلمين" class="college-img">
+  <div class="college-name">كلية البحرين للمعلمين</div>
+  <a class="btn" href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
+  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <ul class="majors">
+    <li><a href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs?mode=ems_copy_t" target="_blank">English Language</a></li>
+    <li><a href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs?mode=ems_copy_t" target="_blank">Mathematics and Sciences</a></li>
+    <li><a href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs?mode=ems_copy_t" target="_blank">Arabic Language and Islamic Studies</a></li>
+  </ul>
+</div>
+
+<!-- كلية التعليم التطبيقي -->
+<div class="college-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية التعليم التطبيقي" class="college-img">
+  <div class="college-name">كلية التعليم التطبيقي</div>
+  <a class="btn" href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
+  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <ul class="majors">
+    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K?mode=ems_copy_t" target="_blank">Applied Science</a></li>
+    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K?mode=ems_copy_t" target="_blank">Design and Technology</a></li>
+    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K?mode=ems_copy_t" target="_blank">Engineering Technology</a></li>
+    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K?mode=ems_copy_t" target="_blank">Business Technology</a></li>
+  </ul>
+</div>
+
+<!-- كلية تقنية المعلومات -->
+<div class="college-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية تقنية المعلومات" class="college-img">
+  <div class="college-name">كلية تقنية المعلومات</div>
+  <a class="btn" href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
+  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <ul class="majors">
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Computer Engineering</a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Network Engineering</a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Information Systems</a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Computer Science</a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Software Engineering</a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Cybersecurity</a></li>
+  </ul>
+</div>
+<script>
+function toggleMajors(button) {
+  const majors = button.nextElementSibling;
+  if (majors.style.display === "block") {
+    majors.style.display = "none";
+    button.textContent = "عرض التخصصات";
+  } else {
+    majors.style.display = "block";
+    button.textContent = "إخفاء التخصصات";
+  }
+}
+</script>
+</body>
+</html>
