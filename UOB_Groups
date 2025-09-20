@@ -10,11 +10,11 @@ body {
   background: #f4f6f9;
   margin: 0;
   padding: 20px;
-  text-align: center;
 }
 h1 {
   color: #333;
   margin-bottom: 25px;
+  text-align: center;
 }
 .container {
   display: grid;
@@ -23,36 +23,30 @@ h1 {
   justify-items: center;
 }
 .college-card {
-  background: #fff;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   width: 100%;
   max-width: 350px;
   transition: transform 0.3s, box-shadow 0.3s;
-  text-align: right;
+  text-align: center; /* Center aligns all content in the card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .college-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
-.college-img {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  background: #f0f0f0;
-  padding: 10px;
-}
 .college-name {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 12px;
-  color: #007B83;
 }
-.btn, .toggle-btn {
-  display: inline-block;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 15px;
   border-radius: 8px;
   background: #007B83;
@@ -60,38 +54,101 @@ h1 {
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;
-  margin: 5px 5px 10px 0;
+  margin: 5px 0 10px 0;
   cursor: pointer;
   border: none;
+  width: 180px; /* Gives the button a fixed width for a more uniform look */
 }
-.btn:hover, .toggle-btn:hover {
+.btn:hover {
   background: #005f63;
 }
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+.whatsapp-icon-major {
+    width: 16px; /* Slightly smaller icon for majors list */
+    height: 16px;
+    margin-right: 8px; /* Margin to separate icon from text */
+    vertical-align: middle;
+}
 .majors {
-  display: none;
+  display: block;
   list-style: none;
   padding: 0;
   margin: 10px 0 0 0;
+  width: 100%;
+  text-align: right; /* Changed back to right for the list items */
 }
 .majors li {
   margin: 6px 0;
+  display: flex; /* Use flex to align icon and text */
+  align-items: center; /* Vertically center icon and text */
+  justify-content: flex-end; /* Align content to the right */
 }
 .majors a {
-  display: block;
-  background: #e0f7f7;
+  display: flex; /* Make the anchor tag a flex container */
+  align-items: center; /* Vertically center its content */
+  justify-content: flex-end; /* Align content to the right within the link */
   padding: 8px 12px;
   border-radius: 8px;
-  color: #007B83;
   text-decoration: none;
   font-size: 15px;
   font-weight: bold;
   transition: all 0.3s;
+  flex-grow: 1; /* Allow the link to grow and fill space */
 }
 .majors a:hover {
-  background: #007B83;
-  color: #fff;
   transform: scale(1.05);
 }
+
+/* Specific styles for each college card */
+.college-card:nth-child(1) { background-color: #f7e1ff; } /* Arts */
+.college-card:nth-child(1) .college-name { color: #8e2b9c; }
+.college-card:nth-child(1) .majors a { background-color: #f1d2ff; color: #8e2b9c; }
+.college-card:nth-child(1) .majors a:hover { background: #8e2b9c; color: #fff; }
+
+.college-card:nth-child(2) { background-color: #fff6e1; } /* Business */
+.college-card:nth-child(2) .college-name { color: #a36102; }
+.college-card:nth-child(2) .majors a { background-color: #ffe6c2; color: #a36102; }
+.college-card:nth-child(2) .majors a:hover { background: #a36102; color: #fff; }
+
+.college-card:nth-child(3) { background-color: #e1ffef; } /* Engineering */
+.college-card:nth-child(3) .college-name { color: #00753b; }
+.college-card:nth-child(3) .majors a { background-color: #c9ffdf; color: #00753b; }
+.college-card:nth-child(3) .majors a:hover { background: #00753b; color: #fff; }
+
+.college-card:nth-child(4) { background-color: #e1f5ff; } /* Law */
+.college-card:nth-child(4) .college-name { color: #005c8a; }
+.college-card:nth-child(4) .majors a { background-color: #c2e6ff; color: #005c8a; }
+.college-card:nth-child(4) .majors a:hover { background: #005c8a; color: #fff; }
+
+.college-card:nth-child(5) { background-color: #f0e1ff; } /* Science */
+.college-card:nth-child(5) .college-name { color: #6a0099; }
+.college-card:nth-child(5) .majors a { background-color: #e3c1ff; color: #6a0099; }
+.college-card:nth-child(5) .majors a:hover { background: #6a0099; color: #fff; }
+
+.college-card:nth-child(6) { background-color: #ffe1e1; } /* Health */
+.college-card:nth-child(6) .college-name { color: #b80000; }
+.college-card:nth-child(6) .majors a { background-color: #ffc2c2; color: #b80000; }
+.college-card:nth-child(6) .majors a:hover { background: #b80000; color: #fff; }
+
+.college-card:nth-child(7) { background-color: #e1fffc; } /* Teachers */
+.college-card:nth-child(7) .college-name { color: #008a79; }
+.college-card:nth-child(7) .majors a { background-color: #c2fff8; color: #008a79; }
+.college-card:nth-child(7) .majors a:hover { background: #008a79; color: #fff; }
+
+.college-card:nth-child(8) { background-color: #e1e9ff; } /* Applied */
+.college-card:nth-child(8) .college-name { color: #2159a3; }
+.college-card:nth-child(8) .majors a { background-color: #c2d8ff; color: #2159a3; }
+.college-card:nth-child(8) .majors a:hover { background: #2159a3; color: #fff; }
+
+.college-card:nth-child(9) { background-color: #eaf1e2; } /* IT */
+.college-card:nth-child(9) .college-name { color: #5c6e3d; }
+.college-card:nth-child(9) .majors a { background-color: #d1dfb6; color: #5c6e3d; }
+.college-card:nth-child(9) .majors a:hover { background: #5c6e3d; color: #fff; }
 </style>
 </head>
 <body>
@@ -99,155 +156,143 @@ h1 {
 <h1>قروبات كليات جامعة البحرين 2025-2026</h1>
 <div class="container">
 
-<!-- كلية الآداب -->
 <div class="college-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية الآداب" class="college-img">
   <div class="college-name">كلية الآداب</div>
-  <a class="btn" href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
-  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <a class="btn" href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j" target="_blank">
+    انضم للقروب العام
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+  </a>
   <ul class="majors">
-    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">Arabic Language and Literature</a></li>
-    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">Islamic Studies</a></li>
-    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">Mass Communication</a></li>
-    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">Tourism</a></li>
-    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">Arts and Design</a></li>
-    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">English Language and Literature</a></li>
-    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j?mode=ems_copy_t" target="_blank">History</a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j" target="_blank">Arabic Language and Literature <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j" target="_blank">Islamic Studies <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j" target="_blank">Mass Communication <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j" target="_blank">Tourism <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j" target="_blank">Arts and Design <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j" target="_blank">English Language and Literature <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/Jg1ETfElYxGI2qUW7RCE8j" target="_blank">History <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
   </ul>
 </div>
 
-<!-- كلية إدارة الأعمال -->
 <div class="college-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية إدارة الأعمال" class="college-img">
   <div class="college-name">كلية إدارة الأعمال</div>
-  <a class="btn" href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
-  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <a class="btn" href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x" target="_blank">
+    انضم للقروب العام
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+  </a>
   <ul class="majors">
-    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Business Analytics</a></li>
-    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Entrepreneurship</a></li>
-    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">International Business and Economics</a></li>
-    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Islamic Banking & Finance</a></li>
-    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Marketing</a></li>
-    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Business Management</a></li>
-    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Banking & Finance</a></li>
-    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x?mode=ems_copy_t" target="_blank">Accounting</a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x" target="_blank">Business Analytics <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x" target="_blank">Entrepreneurship <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x" target="_blank">International Business and Economics <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x" target="_blank">Islamic Banking & Finance <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x" target="_blank">Marketing <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x" target="_blank">Business Management <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x" target="_blank">Banking & Finance <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/CvAmyzpiLqs1wpVEzZuI7x" target="_blank">Accounting <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
   </ul>
 </div>
 
-<!-- كلية الهندسة -->
 <div class="college-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية الهندسة" class="college-img">
   <div class="college-name">كلية الهندسة</div>
-  <a class="btn" href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
-  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <a class="btn" href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk" target="_blank">
+    انضم للقروب العام
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+  </a>
   <ul class="majors">
-    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Mechanical Engineering</a></li>
-    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Civil Engineering</a></li>
-    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Architecture</a></li>
-    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Interior Architecture</a></li>
-    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Chemical Engineering</a></li>
-    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Process Instrumentation & Control Engineering</a></li>
-    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Electrical Engineering</a></li>
-    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk?mode=ems_copy_t" target="_blank">Electronics and Communications Engineering</a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk" target="_blank">Mechanical Engineering <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk" target="_blank">Civil Engineering <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk" target="_blank">Architecture <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk" target="_blank">Interior Architecture <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk" target="_blank">Chemical Engineering <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk" target="_blank">Process Instrumentation & Control Engineering <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk" target="_blank">Electrical Engineering <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/LctPrMQFkcM9cli1Op8fEk" target="_blank">Electronics and Communications Engineering <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
   </ul>
 </div>
 
-<!-- كلية الحقوق -->
 <div class="college-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية الحقوق" class="college-img">
   <div class="college-name">كلية الحقوق</div>
-  <a class="btn" href="https://chat.whatsapp.com/ERZlfEFgB3S9Fa3z4MJMPw?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
-  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <a class="btn" href="https://chat.whatsapp.com/ERZlfEFgB3S9Fa3z4MJMPw" target="_blank">
+    انضم للقروب العام
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+  </a>
   <ul class="majors">
-    <li><a href="https://chat.whatsapp.com/ERZlfEFgB3S9Fa3z4MJMPw?mode=ems_copy_t" target="_blank">Law</a></li>
+    <li><a href="https://chat.whatsapp.com/ERZlfEFgB3S9Fa3z4MJMPw" target="_blank">Law <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
 </ul>
 </div>
 
-<!-- كلية العلوم -->
 <div class="college-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية العلوم" class="college-img">
   <div class="college-name">كلية العلوم</div>
-  <a class="btn" href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
-  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <a class="btn" href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL" target="_blank">
+    انضم للقروب العام
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+  </a>
   <ul class="majors">
-    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Physics</a></li>
-    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Mathematics</a></li>
-    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Actuarial Science</a></li>
-    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Statistics and Data Science</a></li>
-    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Chemistry</a></li>
-    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL?mode=ems_copy_t" target="_blank">Biology</a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL" target="_blank">Physics <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL" target="_blank">Mathematics <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL" target="_blank">Actuarial Science <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL" target="_blank">Statistics and Data Science <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL" target="_blank">Chemistry <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/L4Vyr0XXQm00Pl80oVOmGL" target="_blank">Biology <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
   </ul>
 </div>
 
-<!-- استكمال باقي الكليات: العلوم الصحية والرياضية، البحرين للمعلمين، التعليم التطبيقي، تقنية المعلومات -->
-<!-- كلية العلوم الصحية والرياضية -->
 <div class="college-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية العلوم الصحية والرياضية" class="college-img">
   <div class="college-name">كلية العلوم الصحية والرياضية</div>
-  <a class="btn" href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
-  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <a class="btn" href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2" target="_blank">
+    انضم للقروب العام
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+  </a>
   <ul class="majors">
-    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">Nursing</a></li>
-    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">Medical Laboratory Science</a></li>
-    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">Pharmacy</a></li>
-    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">Radiology Diagnostic</a></li>
-    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2?mode=ems_copy_t" target="_blank">Physical Education</a></li>
+    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2" target="_blank">Nursing <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2" target="_blank">Medical Laboratory Science <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2" target="_blank">Pharmacy <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2" target="_blank">Radiology Diagnostic <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/FUgWbjiKmsHGVNHwGiTnq2" target="_blank">Physical Education <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
   </ul>
 </div>
 
-<!-- كلية البحرين للمعلمين -->
 <div class="college-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية البحرين للمعلمين" class="college-img">
   <div class="college-name">كلية البحرين للمعلمين</div>
-  <a class="btn" href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
-  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <a class="btn" href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs" target="_blank">
+    انضم للقروب العام
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+  </a>
   <ul class="majors">
-    <li><a href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs?mode=ems_copy_t" target="_blank">English Language</a></li>
-    <li><a href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs?mode=ems_copy_t" target="_blank">Mathematics and Sciences</a></li>
-    <li><a href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs?mode=ems_copy_t" target="_blank">Arabic Language and Islamic Studies</a></li>
+    <li><a href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs" target="_blank">English Language <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs" target="_blank">Mathematics and Sciences <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/HKH7Gw9xnYs5rmUS7T7Mzs" target="_blank">Arabic Language and Islamic Studies <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
   </ul>
 </div>
 
-<!-- كلية التعليم التطبيقي -->
 <div class="college-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية التعليم التطبيقي" class="college-img">
   <div class="college-name">كلية التعليم التطبيقي</div>
-  <a class="btn" href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
-  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <a class="btn" href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K" target="_blank">
+    انضم للقروب العام
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+  </a>
   <ul class="majors">
-    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K?mode=ems_copy_t" target="_blank">Applied Science</a></li>
-    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K?mode=ems_copy_t" target="_blank">Design and Technology</a></li>
-    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K?mode=ems_copy_t" target="_blank">Engineering Technology</a></li>
-    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K?mode=ems_copy_t" target="_blank">Business Technology</a></li>
+    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K" target="_blank">Applied Science <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K" target="_blank">Design and Technology <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K" target="_blank">Engineering Technology <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/ImksC3q4uqU0q74XwmH29K" target="_blank">Business Technology <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
   </ul>
 </div>
 
-<!-- كلية تقنية المعلومات -->
 <div class="college-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/University_of_Bahrain_logo.svg" alt="كلية تقنية المعلومات" class="college-img">
   <div class="college-name">كلية تقنية المعلومات</div>
-  <a class="btn" href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">انضم للقروب العام</a>
-  <button class="toggle-btn" onclick="toggleMajors(this)">عرض التخصصات</button>
+  <a class="btn" href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu" target="_blank">
+    انضم للقروب العام
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+  </a>
   <ul class="majors">
-    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Computer Engineering</a></li>
-    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Network Engineering</a></li>
-    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Information Systems</a></li>
-    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Computer Science</a></li>
-    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Software Engineering</a></li>
-    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu?mode=ems_copy_t" target="_blank">Cybersecurity</a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu" target="_blank">Computer Engineering <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu" target="_blank">Network Engineering <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu" target="_blank">Information Systems <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu" target="_blank">Computer Science <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu" target="_blank">Software Engineering <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
+    <li><a href="https://chat.whatsapp.com/EXXSV22AFiL1JgVMPUHMDu" target="_blank">Cybersecurity <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon-major"></a></li>
   </ul>
 </div>
-<script>
-function toggleMajors(button) {
-  const majors = button.nextElementSibling;
-  if (majors.style.display === "block") {
-    majors.style.display = "none";
-    button.textContent = "عرض التخصصات";
-  } else {
-    majors.style.display = "block";
-    button.textContent = "إخفاء التخصصات";
-  }
-}
-</script>
+
 </body>
 </html>
